@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Customer.RegisterCustomerController">
+   <children>
+      <Separator layoutY="30.0" prefHeight="6.0" prefWidth="1300.0" />
+      <Separator layoutX="515.0" layoutY="33.0" orientation="VERTICAL" prefHeight="768.0" prefWidth="15.0" />
+      <Label layoutX="15.0" layoutY="56.0" text="Type:" />
+      <ComboBox fx:id="customerType" layoutX="101.0" layoutY="52.0" onAction="#customerChoiceBox" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="90.0" text="Business Name:" />
+      <TextField fx:id="businessNameTxt" layoutX="101.0" layoutY="86.0" />
+      <Label layoutX="15.0" layoutY="121.0" text="Forename:" />
+      <TextField fx:id="forenameTxt" layoutX="101.0" layoutY="118.0" />
+      <Label layoutX="15.0" layoutY="154.0" text="Surname:" />
+      <TextField fx:id="surnameTxt" layoutX="101.0" layoutY="150.0" />
+      <Label layoutX="15.0" layoutY="187.0" text="Address Line 1:" />
+      <TextField fx:id="addressLineOneTxt" layoutX="101.0" layoutY="183.0" />
+      <Label layoutX="15.0" layoutY="220.0" text="Address Line 2:" />
+      <TextField fx:id="addressLineTwoTxt" layoutX="101.0" layoutY="216.0" />
+      <Label layoutX="15.0" layoutY="254.0" text="County:" />
+      <TextField fx:id="countyTxt" layoutX="101.0" layoutY="250.0" />
+      <Label layoutX="15.0" layoutY="287.0" text="Postcode:" />
+      <TextField fx:id="postcodeTxt" layoutX="101.0" layoutY="283.0" />
+      <Label layoutX="15.0" layoutY="320.0" text="Phone number:" />
+      <TextField fx:id="phoneNumberTxt" layoutX="101.0" layoutY="316.0" onKeyPressed="#checkForEnterPressed" />
+      <Button fx:id="submitButton" layoutX="101.0" layoutY="350.0" mnemonicParsing="false" onAction="#registerNewCustomer" prefHeight="25.0" prefWidth="149.0" text="Submit" />
+      <Button fx:id="resetBtn" layoutX="102.0" layoutY="381.0" mnemonicParsing="false" onAction="#resetFields" prefHeight="25.0" prefWidth="149.0" text="Reset" />
+      <Label fx:id="typeErrorLbl" layoutX="264.0" layoutY="56.0" textFill="RED" />
+      <Label fx:id="businessErrorLbl" layoutX="264.0" layoutY="90.0" textFill="RED" />
+      <Label fx:id="forenameErrorLbl" layoutX="264.0" layoutY="122.0" textFill="RED" />
+      <Label fx:id="surnameErrorLbl" layoutX="264.0" layoutY="154.0" textFill="RED" />
+      <Label fx:id="addressLine1ErrorLbl" layoutX="264.0" layoutY="187.0" textFill="RED" />
+      <Label fx:id="countyErrorLbl" layoutX="264.0" layoutY="254.0" textFill="RED" />
+      <Label fx:id="postcodeErrorLbl" layoutX="264.0" layoutY="287.0" textFill="RED" />
+      <Label fx:id="phoneNumberErrorLbl" layoutX="264.0" layoutY="320.0" textFill="RED" />
+      <Label fx:id="successLbl" layoutX="88.0" layoutY="421.0" textFill="RED" />
+   </children>
+</AnchorPane>

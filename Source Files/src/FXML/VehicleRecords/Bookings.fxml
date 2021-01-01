@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import Controllers.VehicleRecords.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="357.0" prefWidth="710.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.VehicleRecords.BookingsController">
+ <children>
+      <Label alignment="CENTER" layoutX="193.0" layoutY="20.0" prefHeight="53.0" prefWidth="304.0" text="Vehicle Bookings">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="mytable" layoutY="87.0" prefHeight="164.0" prefWidth="710.0">
+        <columns>
+          <TableColumn fx:id="bid" editable="false" prefWidth="69.0" text="Booking ID" />
+          <TableColumn fx:id="type" editable="false" prefWidth="83.0" sortable="false" text="Booking Type" />
+            <TableColumn fx:id="ts" editable="false" prefWidth="161.0" sortable="false" text="Booking Start" />
+            <TableColumn fx:id="te" editable="false" prefWidth="135.0" sortable="false" text="Booking End" />
+            <TableColumn fx:id="bn" editable="false" minWidth="0.0" prefWidth="92.0" sortable="false" text="Bay Number" />
+            <TableColumn fx:id="mid" editable="false" minWidth="0.0" prefWidth="83.0" sortable="false" text="Mechanic ID" />
+            <TableColumn fx:id="bill" editable="false" prefWidth="86.0" sortable="false" text="Bill" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

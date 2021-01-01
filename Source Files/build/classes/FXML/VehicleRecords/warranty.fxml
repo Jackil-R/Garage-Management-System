@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import Controllers.VehicleRecords.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="430.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.VehicleRecords.WarrantyController">
+    <children>
+      <Label alignment="CENTER" layoutX="75.0" layoutY="14.0" prefHeight="54.0" prefWidth="295.0" text="Vehicle Warranty">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="mytable" layoutX="9.0" layoutY="76.0" prefHeight="200.0" prefWidth="412.0">
+           <placeholder>
+            <Label text="This vehicle has no warranty"/>
+        </placeholder>
+        <columns>
+          <TableColumn fx:id="wid" prefWidth="75.0" text="WarrantyID" />
+          <TableColumn fx:id="name" prefWidth="98.0" text="Company Name" />
+            <TableColumn fx:id="address" prefWidth="115.0" text="Address" />
+            <TableColumn fx:id="expire" prefWidth="122.0" text="Expire Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

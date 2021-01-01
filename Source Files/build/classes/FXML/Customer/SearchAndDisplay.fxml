@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Customer.SearchAndDisplayController">
+   <children>
+      <Separator layoutY="30.0" prefHeight="6.0" prefWidth="1300.0" />
+      <Separator layoutX="243.0" layoutY="33.0" orientation="VERTICAL" prefHeight="768.0" prefWidth="15.0" />
+      <Separator layoutX="515.0" layoutY="33.0" orientation="VERTICAL" prefHeight="768.0" prefWidth="15.0" />
+      <Separator layoutX="522.0" layoutY="69.0" prefHeight="6.0" prefWidth="762.0" />
+      <AnchorPane layoutX="17.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <fx:include fx:id="search" source="SearchModule.fxml" />
+            <Button fx:id="loadDetailsBtn" layoutY="255.0" mnemonicParsing="false" onAction="#loadDetails" prefHeight="35.0" prefWidth="209.0" text="Load Customer Details" />
+            <Button fx:id="resetDetailsBtn" layoutY="202.0" mnemonicParsing="false" onAction="#resetDetails" prefHeight="25.0" prefWidth="209.0" text="Reset Customer Details View" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="vehiclesOwnedTable" layoutX="521.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="780.0">
+         <children>
+            <TableView fx:id="vehiclesTable" layoutX="33.0" layoutY="43.0" prefHeight="730.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="vehicleName" editable="false" minWidth="261.0" prefWidth="261.0" resizable="false" text="Vehicle Type" />
+                <TableColumn fx:id="vehicleMake" editable="false" minWidth="261.0" prefWidth="254.0" resizable="false" text="Vehicle Make" />
+                  <TableColumn fx:id="vehicleModel" editable="false" minWidth="260.0" prefWidth="260.0" resizable="false" text="Vehicle Model" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+            <AnchorPane fx:id="pastBookingsTable" layoutX="521.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="780.0">
+         <children>
+            <TableView fx:id="pastTable" layoutX="33.0" layoutY="43.0" prefHeight="730.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                  <TableColumn fx:id="pastBookingName" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking Type" />
+                  <TableColumn fx:id="pastBookingCost" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking Cost" />
+                  <TableColumn fx:id="pastBookingDate" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking Date" />
+                  <TableColumn fx:id="pastBookingStartTime" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking Start Time" />
+                  <TableColumn fx:id="pastBookingEndTime" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking End Time" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+            <AnchorPane fx:id="futureBookingsTable" layoutX="521.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="780.0">
+         <children>
+            <TableView fx:id="futureTable" layoutX="33.0" layoutY="43.0" prefHeight="730.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                  <TableColumn fx:id="futureBookingName" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking Type" />
+                  <TableColumn fx:id="futureBookingCost" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking Cost" />
+                <TableColumn fx:id="futureBookingDate" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking Date" />
+                  <TableColumn fx:id="futureBookingStartTime" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking Start Time" />
+                  <TableColumn fx:id="futureBookingEndTime" editable="false" minWidth="156.0" prefWidth="156.0" resizable="false" text="Booking End Time" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="vehiclesOwnedBtn" disable="true" layoutX="17.0" layoutY="373.0" mnemonicParsing="false" onAction="#vehiclesOwnedPressed" prefHeight="35.0" prefWidth="210.0" text="Vehicles Owned" visible="false" />
+      <Button fx:id="pastBookingsBtn" disable="true" layoutX="17.0" layoutY="423.0" mnemonicParsing="false" onAction="#pastBookingsPressed" prefHeight="35.0" prefWidth="210.0" text="Past Bookings" visible="false" />
+      <Button fx:id="futureBookingsBtn" disable="true" layoutX="17.0" layoutY="473.0" mnemonicParsing="false" onAction="#futureBookingsPressed" prefHeight="35.0" prefWidth="210.0" text="Future Bookings" visible="false" />
+      <Button fx:id="editBtn" layoutX="300.0" layoutY="373.0" mnemonicParsing="false" onAction="#openEditContext" prefHeight="25.0" prefWidth="59.0" text="Edit" visible="false" />
+      <Button fx:id="removeBtn" layoutX="398.0" layoutY="373.0" mnemonicParsing="false" onAction="#removeCustomAccountDialog" text="Remove" visible="false" />
+      <Button fx:id="payBillsBtn" layoutX="300.0" layoutY="408.0" mnemonicParsing="false" onAction="#outstandingBillsPayment" prefHeight="25.0" prefWidth="157.0" text="Pay Bills" visible="false" />
+      <Label fx:id="balancePlaceHolderLbl" layoutX="955.0" layoutY="4.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="outstandingBalanceLbl" layoutX="1177.0" prefHeight="35.0" prefWidth="100.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLbl" layoutX="271.0" layoutY="42.0">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerIDsolidLbl" layoutX="271.0" layoutY="69.0" opacity="0.0" text="CUSTOMER ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerIDLbl" layoutX="396.0" layoutY="69.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="addressLine1Lbl" layoutX="272.0" layoutY="98.0" prefHeight="17.0" prefWidth="189.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="addressLine2Lbl" layoutX="272.0" layoutY="118.0" prefHeight="17.0" prefWidth="189.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="countyLbl" layoutX="272.0" layoutY="138.0" prefHeight="17.0" prefWidth="189.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="postCodeLbl" layoutX="272.0" layoutY="158.0" prefHeight="17.0" prefWidth="189.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="phoneNumberLbl" layoutX="272.0" layoutY="188.0" prefHeight="17.0" prefWidth="189.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="componentTitle" layoutX="530.0" layoutY="36.0" prefHeight="35.0" prefWidth="750.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="drbBookingsPhoneCallBtn" layoutX="17.0" layoutY="573.0" mnemonicParsing="false" onAction="#drbBookingBtnPressed" prefHeight="35.0" prefWidth="210.0" text="Diagnosis and Repair Phone Calls" textFill="RED" visible="false" />
+      <Button fx:id="smbBookingsPhoneCallBtn" layoutX="17.0" layoutY="523.0" mnemonicParsing="false" onAction="#smbBookingBtnPressed" prefHeight="35.0" prefWidth="210.0" text="Scheduled Maintenance Phone Calls" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DiagnosisRepairBookings.EditDetailsController">
+   <children>
+      <Label layoutX="209.0" layoutY="14.0" prefHeight="23.0" prefWidth="141.0" text="Editing Booking">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="13.0" layoutY="119.0" prefHeight="307.0" prefWidth="293.0">
+         <children>
+            <Label layoutX="14.0" layoutY="37.0" text="Booking Type:" />
+            <Label layoutX="12.0" layoutY="69.0" text="Booking Date:" />
+            <Label layoutX="39.0" layoutY="103.0" text="Mechanic:" />
+            <Label layoutX="35.0" layoutY="137.0" text="Start Time:" />
+            <Label layoutX="40.0" layoutY="169.0" text="End Time:" />
+            <Label layoutX="24.0" layoutY="208.0" text="Bay Number:" />
+            <Label layoutX="24.0" layoutY="239.0" text="Booking Fee:" />
+            <TextField fx:id="TbookingType" editable="false" layoutX="102.0" layoutY="32.0" />
+            <TextField fx:id="TbookingFee" editable="false" layoutX="103.0" layoutY="234.0" />
+            <DatePicker fx:id="datePickerStart" layoutX="102.0" layoutY="64.0" prefHeight="26.0" prefWidth="163.0" />
+            <Label layoutX="-4.0" layoutY="272.0" text="Current Mileages:" />
+            <TextField fx:id="TcurrentMileage" layoutX="102.0" layoutY="267.0" />
+            <Label layoutX="77.0" text="Booking Details">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="Tmechanics" layoutX="103.0" layoutY="98.0" prefHeight="26.0" prefWidth="159.0" />
+            <ComboBox fx:id="TbayNumber" layoutX="103.0" layoutY="203.0" prefHeight="26.0" prefWidth="163.0" />
+            <LocalTimePicker fx:id="TstartTime" layoutX="101.0" layoutY="129.0" prefHeight="32.0" prefWidth="163.0" />
+            <LocalTimePicker fx:id="TendTime" layoutX="99.0" layoutY="164.0" prefHeight="32.0" prefWidth="163.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" layoutY="125.0" prefHeight="307.0" prefWidth="293.0">
+         <children>
+            <TextArea fx:id="Tfault" layoutX="13.0" layoutY="46.0" prefHeight="94.0" prefWidth="268.0" />
+            <Label layoutX="14.0" layoutY="30.0" text="Faults Detected:" />
+            <Label layoutX="14.0" layoutY="161.0" text="Parts Required:" />
+            <TextArea fx:id="Tparts" editable="false" layoutX="13.0" layoutY="177.0" prefHeight="107.0" prefWidth="268.0" />
+            <Button fx:id="viewParts" layoutX="191.0" layoutY="148.0" mnemonicParsing="false" text="Select Parts" />
+            <Label layoutX="99.0" layoutY="5.0" text="Repair Details">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="13.0" layoutY="60.0" text="Customer/Business Name:" />
+      <TextField fx:id="showCustomer" editable="false" layoutX="172.0" layoutY="53.0" />
+      <TextField fx:id="TcustomerID" editable="false" layoutX="172.0" layoutY="87.0" />
+      <Label layoutX="35.0" layoutY="94.0" text="Customer/Business ID:" />
+      <Label layoutX="415.0" layoutY="60.0" text="Vehicle ID:" />
+      <Label layoutX="358.0" layoutY="92.0" text="Vehicle Registration:" />
+      <TextField fx:id="TvehicleID" editable="false" layoutX="479.0" layoutY="55.0" prefHeight="26.0" prefWidth="97.0" />
+      <TextField fx:id="TvehicleReg" editable="false" layoutX="479.0" layoutY="87.0" prefHeight="26.0" prefWidth="97.0" />
+      <Button fx:id="saveBooking" layoutX="71.0" layoutY="442.0" mnemonicParsing="false" onAction="#saveChanges" text="Save Changes" />
+      <Button fx:id="closeWindow" layoutX="182.0" layoutY="442.0" mnemonicParsing="false" onAction="#closeStage" text="Close Booking" />
+      <Button fx:id="DeleteBooking" layoutX="293.0" layoutY="442.0" mnemonicParsing="false" onAction="#deleteBooking" prefHeight="26.0" prefWidth="115.0" text="Delete Booking" />
+      <Button fx:id="completeBooking" layoutX="418.0" layoutY="442.0" mnemonicParsing="false" onAction="#finishedBooking" text="Booking Completed" />
+   </children>
+</AnchorPane>

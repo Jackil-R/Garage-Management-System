@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="140.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Customer.DeleteWarningDialogController">
+   <children>
+      <VBox layoutX="100.0" layoutY="15.0" maxHeight="+Infinity" maxWidth="+Infinity" minHeight="-Infinity" prefHeight="85.0" prefWidth="383.0" spacing="7.0">
+         <children>
+            <Label fx:id="headerMessageLbl" text="Customer Removal" textAlignment="LEFT" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="bodyMessageLbl" prefHeight="54.0" prefWidth="359.0" text="The customer you tried to remove has not paid all of their bills. They have an outstanding balance and therefore cannot be removed." textAlignment="LEFT" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox layoutX="374.0" layoutY="101.0" maxHeight="-Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="102.0">
+         <children>
+            <Button fx:id="okBtn" minWidth="80.0" mnemonicParsing="false" onAction="#okPressed" text="OK" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets left="14.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView fitHeight="79.0" fitWidth="64.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/delete_icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

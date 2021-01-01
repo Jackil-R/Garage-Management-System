@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import jfxtras.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import jfxtras.labs.scene.control.*?>
+<?import jfxtras.scene.control.agenda.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="746.0" prefWidth="1279.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ScheduledMaintenanceBookings.MainFXMLController">
+   <children>
+      <DatePicker fx:id="datepicker" layoutX="1073.0" layoutY="323.0" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="151.0" text="Customer Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="273.0" layoutY="14.0" prefHeight="25.0" prefWidth="151.0" text="Vehicle Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="540.0" layoutY="14.0" prefHeight="25.0" prefWidth="151.0" text="Booking Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfCustomerName" editable="false" layoutX="99.0" layoutY="44.0" />
+      <Label layoutX="39.0" layoutY="48.0" text="First Name:" />
+      <Label layoutX="49.0" layoutY="79.0" text="Surname:" />
+      <TextField fx:id="tfCustomerSurname" editable="false" layoutX="99.0" layoutY="75.0" />
+      <TextField fx:id="tfCustomerAddress1" editable="false" layoutX="99.0" layoutY="137.0" />
+      <Label layoutX="19.0" layoutY="141.0" text="Address Line 1:" />
+      <Label layoutX="14.0" layoutY="110.0" text="Phone Number:" />
+      <TextField fx:id="tfCustomerNumber" editable="false" layoutX="99.0" layoutY="106.0" />
+      <Label layoutX="19.0" layoutY="172.0" text="Address Line 2:" />
+      <TextField fx:id="tfCustomerAddress2" editable="false" layoutX="99.0" layoutY="168.0" />
+      <TextField fx:id="tfCustomerCompany" editable="false" layoutX="99.0" layoutY="261.0" />
+      <Label layoutX="47.0" layoutY="265.0" text="Company:" />
+      <TextField fx:id="tfCustomerCounty" editable="false" layoutX="99.0" layoutY="199.0" />
+      <Label layoutX="59.0" layoutY="203.0" text="County:" />
+      <Label layoutX="48.0" layoutY="234.0" text="Postcode:" />
+      <TextField fx:id="tfCustomerPostal" editable="false" layoutX="99.0" layoutY="230.0" />
+      <TextField fx:id="tfVehicleMOT" editable="false" layoutX="349.0" layoutY="260.0" />
+      <Label layoutX="258.0" layoutY="264.0" text="MOT Expiry Date:" />
+      <Label layoutX="296.0" layoutY="234.0" text="Fuel Type:" />
+      <TextField fx:id="tfVehicleFuel" editable="false" layoutX="350.0" layoutY="230.0" />
+      <Label layoutX="258.0" layoutY="295.0" text="Last Service Date:" />
+      <TextField fx:id="tfVehicleService" editable="false" layoutX="350.0" layoutY="291.0" />
+      <TextField fx:id="tfVehicleColour" editable="false" layoutX="349.0" layoutY="199.0" />
+      <Label layoutX="308.0" layoutY="203.0" text="Colour:" />
+      <TextField fx:id="tfVehicleReg" editable="false" layoutX="351.0" layoutY="103.0" />
+      <Label layoutX="326.0" layoutY="110.0" text="Reg:" />
+      <Label layoutX="304.0" layoutY="138.0" text="Mileage:" />
+      <TextField fx:id="tfVehicleMileage" editable="false" layoutX="351.0" layoutY="134.0" />
+      <TextField fx:id="tfVehicleModel" editable="false" layoutX="351.0" layoutY="72.0" />
+      <Label layoutX="314.0" layoutY="76.0" text="Model:" />
+      <Label layoutX="317.0" layoutY="45.0" text="Make:" />
+      <TextField fx:id="tfVehicleMake" editable="false" layoutX="351.0" layoutY="41.0" />
+      <Label layoutX="286.0" layoutY="172.0" text="Engine Size:" />
+      <TextField fx:id="tfVehicleEngine" editable="false" layoutX="350.0" layoutY="168.0" />
+      <TextField fx:id="tfVehicleWarranty" editable="false" layoutX="349.0" layoutY="320.0" />
+      <Label layoutX="296.0" layoutY="324.0" text="Warranty:" />
+      <TextField fx:id="tfBookingTimeStart" editable="false" layoutX="603.0" layoutY="167.0" />
+      <Label layoutX="548.0" layoutY="171.0" text="Time Start:" />
+      <TextField fx:id="tfBookingType" editable="false" layoutX="604.0" layoutY="40.0" />
+      <Label layoutX="527.0" layoutY="44.0" text="Booking Type:" />
+      <Label layoutX="537.0" layoutY="76.0" text="Booking Fee:" />
+      <TextField fx:id="tfBookingFee" editable="false" layoutX="604.0" layoutY="71.0" />
+      <TextField fx:id="tfBookingMechanic" editable="false" layoutX="604.0" layoutY="133.0" />
+      <Label layoutX="549.0" layoutY="135.0" text="Mechanic:" />
+      <Label layoutX="576.0" layoutY="107.0" text="Date:" />
+      <Label layoutX="550.0" layoutY="202.0" text="Time End:" />
+      <TextField fx:id="tfBookingTimeEnd" editable="false" layoutX="602.0" layoutY="198.0" />
+      <TextField fx:id="tfBookingBayNumber" editable="false" layoutX="603.0" layoutY="229.0" />
+      <Label layoutX="536.0" layoutY="233.0" text="Bay Number:" />
+      <TextArea fx:id="tfBookingNotes" editable="false" layoutX="789.0" layoutY="56.0" prefHeight="71.0" prefWidth="471.0" />
+      <Label layoutX="792.0" layoutY="33.0" text="Booking Notes:" />
+      <Label layoutX="791.0" layoutY="142.0" text="Parts List:" />
+      <Button fx:id="btnCreateNewServiceReport" layoutX="548.0" layoutY="269.0" mnemonicParsing="false" onAction="#createServiceReport" prefHeight="25.0" prefWidth="215.0" text="Create Service Report" />
+      <Button fx:id="btnAgendaWeekLeft" layoutX="1048.0" layoutY="323.0" mnemonicParsing="false" onAction="#goDayBack" text="&lt;" />
+      <Button fx:id="btnAgendaWeekRight" layoutX="1247.0" layoutY="323.0" mnemonicParsing="false" onAction="#goDayForward" text="&gt;" />
+      <Agenda fx:id="agenda" layoutY="353.0" prefHeight="410.0" prefWidth="1279.0" />
+      <TextArea fx:id="tfBookingParts" editable="false" layoutX="794.0" layoutY="163.0" prefHeight="71.0" prefWidth="465.0" />
+      <GridPane fx:id="gridPane" layoutX="959.0" layoutY="333.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="952.0" layoutY="319.0" text="Change View" />
+      <TextField fx:id="tfBookingDate" editable="false" layoutX="603.0" layoutY="100.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5aca8" height="17.0" layoutX="808.0" layoutY="302.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Label layoutX="776.0" layoutY="271.0" text="Garage Bay Legend">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="776.0" layoutY="302.0" text="Bay 1:" />
+      <Label layoutX="865.0" layoutY="302.0" text="Bay 2:" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb28f" height="17.0" layoutX="897.0" layoutY="302.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Label layoutX="949.0" layoutY="302.0" text="Bay 3:" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95e8c2" height="17.0" layoutX="981.0" layoutY="302.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Label layoutX="1035.0" layoutY="302.0" text="Bay 4:" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b3dc6c" height="17.0" layoutX="1067.0" layoutY="302.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Label layoutX="1122.0" layoutY="302.0" text="Bay 5:" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#99bbf2" height="17.0" layoutX="1154.0" layoutY="302.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Label layoutX="1202.0" layoutY="302.0" text="Bay 6:" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cd74e6" height="17.0" layoutX="1234.0" layoutY="302.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Label layoutX="1067.0" layoutY="274.0" text="Diagnosis and Repair Booking:" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c6c6c6" height="17.0" layoutX="1234.0" layoutY="273.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="267.0" prefWidth="305.0" style="-fx-background-color: rgba(0,0,0,0.08),        linear-gradient(#9a9a9a, #909090),        linear-gradient(white 0%, #f3f3f3 50%, #ececec 51%, #f2f2f2 100%);;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.StartPage.LoginFXMLController">
+   <children>
+      <TextField fx:id="tfUsername" focusTraversable="false" layoutX="22.0" layoutY="110.0" prefHeight="32.0" prefWidth="262.0" promptText="Username" />
+      <ImageView fx:id="imgLogo" fitHeight="49.0" fitWidth="225.0" layoutX="41.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/login_logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgExit" fitHeight="15.0" fitWidth="15.0" layoutX="284.0" layoutY="7.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../resources/exit_icon.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="tfPassword" layoutX="22.0" layoutY="164.0" onKeyPressed="#checkForEnterPressed" prefHeight="32.0" prefWidth="262.0" promptText="Password" />
+      <Button fx:id="btnLogin" layoutX="22.0" layoutY="214.0" mnemonicParsing="false" onAction="#initLogin" prefHeight="35.0" prefWidth="262.0" style="-fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),        linear-gradient(#020b02, #3a3a3a),        linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),        linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),        linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import Controllers.VehicleRecords.* ?>
+
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.VehicleRecords.AddController">
+      <children>
+      <Pane prefHeight="400.0" prefWidth="606.0">
+         <children>
+            <Label alignment="CENTER" layoutX="163.0" layoutY="14.0" prefHeight="53.0" prefWidth="303.0" text="Add New Vehicle">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="119.0" text="Customer ID:" />
+            <Label layoutX="38.0" layoutY="189.0" text="Make:" />
+            <Label layoutX="35.0" layoutY="223.0" text="Model:" />
+            <Label layoutX="34.0" layoutY="258.0" text="Engine Size:" />
+            <Label layoutX="35.0" layoutY="327.0" text="Colour:" />
+            <Label layoutX="33.0" layoutY="294.0" text="Fuel Type:" />
+            <Label layoutX="301.0" layoutY="132.0" text="Mot Expire Date:" />
+            <Label layoutX="302.0" layoutY="164.0" text="Last Service Date:" />
+            <ComboBox fx:id="model" layoutX="102.0" layoutY="219.0" prefWidth="150.0" promptText="Model" />
+            <ComboBox fx:id="make" layoutX="102.0" layoutY="185.0" prefWidth="150.0" onAction="#getcarmodel" promptText="Make" />
+            <ComboBox fx:id="es" layoutX="102.0" layoutY="254.0" prefWidth="150.0" promptText="Engine Size" />
+            <ComboBox fx:id="fuel" layoutX="102.0" layoutY="290.0" prefWidth="150.0" promptText="Fuel Type" />
+            <ComboBox fx:id="colour" layoutX="102.0" layoutY="323.0" prefWidth="150.0" promptText="Colour" />
+            <DatePicker fx:id="expire" layoutX="406.0" layoutY="128.0" />
+            <DatePicker fx:id="service" layoutX="406.0" layoutY="160.0" />
+            <Button fx:id="add" layoutX="493.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleButtonadd" prefHeight="25.0" prefWidth="87.0" text="Add" />
+            <ComboBox fx:id="cid" layoutX="102.0" layoutY="115.0" prefWidth="150.0" promptText="Customer ID" />
+            <NornalTextField fx:id="reg" layoutX="103.0" layoutY="77.0" promptText="Enter Regestration" />
+            <Label layoutX="25.0" layoutY="81.0" prefHeight="17.0" prefWidth="69.0" text="Registration:" />
+            <CheckBox fx:id="check" layoutX="390.0" layoutY="198.0" mnemonicParsing="false" onAction="#clicked" text="Warranty" />
+            <NornalTextField fx:id="cn" layoutX="401.0" layoutY="228.0" />
+            <NornalTextField fx:id="address" layoutX="401.0" layoutY="263.0" />
+            <Label layoutX="301.0" layoutY="232.0" text="Company Name:" />
+            <Label layoutX="305.0" layoutY="271.0" prefHeight="17.0" prefWidth="80.0" text="Address:" />
+            <DatePicker fx:id="warranty" layoutX="401.0" layoutY="303.0" />
+            <Label layoutX="303.0" layoutY="307.0" prefHeight="17.0" prefWidth="63.0" text="Expire Date:" />
+            <ComboBox fx:id="ct" layoutX="102.0" layoutY="151.0" prefWidth="150.0" onAction="#getcarmake" promptText="Car type" />
+            <Label layoutX="33.0" layoutY="155.0" prefHeight="17.0" prefWidth="63.0" text="Car Type:" />
+            <NumberTextField  fx:id="mile" layoutX="406.0" layoutY="86.0" promptText="mileage" />
+            <Label layoutX="304.0" layoutY="90.0" prefHeight="17.0" prefWidth="80.0" text="Mileage:" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StartPage.StartPageController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1300.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+              <MenuItem fx:id="miLock" mnemonicParsing="false" text="Lock" />
+              <MenuItem fx:id="miExit" mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+                  <MenuItem fx:id="miCustomerManual" mnemonicParsing="false" text="Customer Manual" />
+                  <MenuItem fx:id="miPartsManual" mnemonicParsing="false" text="Parts and Suppliers Manual" />
+                  <MenuItem fx:id="miDiagnosisManual" mnemonicParsing="false" text="Diagnosis and Repair Manual" />
+                  <MenuItem fx:id="miScheduledManual" mnemonicParsing="false" text="Scheduled Maintanence Manual" />
+                  <MenuItem fx:id="miVehicleManual" mnemonicParsing="false" text="Vehicle Records Manual" />
+                  <MenuItem fx:id="miAbout" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu fx:id="labelMech" mnemonicParsing="false" text="Logged in as: " />
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tabPane" layoutY="28.0" prefHeight="800.0" prefWidth="1300.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+          <tabs>
+              
+              <Tab text="Customer Accounts">
+               <content>
+                  <AnchorPane prefHeight="752.0" prefWidth="1280.0">
+                     <children>
+                       <fx:include source="../Customer/CustomerAccountsMain.fxml" />               
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Diagnosis and Repair Bookings">
+               <content>
+                  <AnchorPane prefHeight="752.0" prefWidth="1280.0">
+                     <children>
+                       <fx:include source="../DiagnosisRepairBookings/FXMLDocument.fxml" />               
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Parts">
+                 <content>
+                  <AnchorPane prefHeight="752.0" prefWidth="1280.0">
+                     <children>
+                        <fx:include source="../Parts/Parts.fxml" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Scheduled Maintenance Bookings">
+                  <content>
+                  <AnchorPane prefHeight="752.0" prefWidth="1280.0">
+                     <children>
+                       <fx:include source="../ScheduledMaintenanceBookings/MainFXML.fxml" />               
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Vehicle Records">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <fx:include source="../VehicleRecords/FXMLDocument.fxml" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+              
+          </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

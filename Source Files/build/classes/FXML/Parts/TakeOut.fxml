@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="378.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Parts.TakeOutController">
+   <children>
+      <Button fx:id="closer" layoutX="104.0" layoutY="324.0" mnemonicParsing="false" onAction="#closeBasket" prefHeight="42.0" prefWidth="178.0" text="Take out items" />
+      <Button fx:id="back" layoutX="433.0" layoutY="324.0" mnemonicParsing="false" onAction="#close" prefHeight="42.0" prefWidth="178.0" text="Back" />
+      <TableView fx:id="basketView" editable="true" layoutX="45.0" layoutY="79.0" prefHeight="230.0" prefWidth="623.0">
+         <columns>
+            <TableColumn fx:id="basketId" editable="true" prefWidth="77.0" text="ID" />
+            <TableColumn fx:id="basketName" editable="false" prefWidth="112.0" text="Name" />
+            <TableColumn fx:id="basketDesc" editable="false" prefWidth="129.0" text="Description" />
+            <TableColumn fx:id="basketStock" editable="false" prefWidth="78.0" text="In Stock" />
+            <TableColumn fx:id="basketPrice" prefWidth="84.0" text="Price" />
+            <TableColumn fx:id="basketOrder" prefWidth="60.0" text="Select" />
+            <TableColumn fx:id="basketWithdraw" editable="true" prefWidth="82.0" text="Take out" />
+         </columns>
+      </TableView>
+      <Label layoutX="37.0" layoutY="39.0" prefHeight="27.0" prefWidth="623.0" text=" Click on Take Out to set number of items. Hit ENTER to commit changes!" textFill="#d00d0d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

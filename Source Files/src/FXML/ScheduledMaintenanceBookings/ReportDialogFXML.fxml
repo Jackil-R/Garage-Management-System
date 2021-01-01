@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ScheduledMaintenanceBookings.ReportDialogController">
+   <children>
+      <TextArea fx:id="taDescription" layoutX="24.0" layoutY="140.0" prefHeight="134.0" prefWidth="467.0" />
+      <Label layoutX="22.0" layoutY="20.0" text="Maintanence Outcome:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="120.0" text="Booking Notes (must be filled in if maintanence fails):" />
+      <Button fx:id="btnCreateReport" layoutX="142.0" layoutY="291.0" mnemonicParsing="false" onAction="#createServiceReport" prefHeight="39.0" prefWidth="232.0" text="Create Service Report" />
+      <TextField fx:id="tfMileage" layoutX="153.0" layoutY="67.0" />
+      <Label layoutX="24.0" layoutY="69.0" text="Mileage at Booking:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbResult" layoutX="231.0" layoutY="22.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label fx:id="msg" layoutX="108.0" layoutY="1.0" textFill="RED">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

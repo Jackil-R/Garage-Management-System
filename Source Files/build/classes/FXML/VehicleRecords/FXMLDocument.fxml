@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import Controllers.VehicleRecords.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="258.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.VehicleRecords.FXMLDocumentController">
+       <children>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="1044.0">
+                     <children>
+                        <TableView fx:id="mytable" layoutX="23.0" layoutY="91.0" prefHeight="294.0" prefWidth="999.0">
+                          <columns>
+                            <TableColumn fx:id="vid" editable="false" prefWidth="75.0" sortable="false" text="Registration" />
+                            <TableColumn fx:id="cid" editable="false" prefWidth="75.0" sortable="false" text="Customer ID" />
+                              <TableColumn fx:id="ctid" editable="false" prefWidth="75.0" sortable="false" text="Car Type" />
+                              <TableColumn fx:id="mdid" editable="false" prefWidth="75.0" sortable="false" text="Model" />
+                              <TableColumn fx:id="mid" editable="false" prefWidth="75.0" sortable="false" text="Make" />
+                              <TableColumn fx:id="esid" editable="false" prefWidth="75.0" sortable="false" text="Engine Size" />
+                              <TableColumn fx:id="coid" editable="false" prefWidth="75.0" sortable="false" text="Colour" />
+                              <TableColumn fx:id="ftid" editable="false" prefWidth="75.0" sortable="false" text="Fuel Type" />
+                              <TableColumn fx:id="mote" editable="false" prefWidth="109.0" sortable="false" text="MOT Expire Date" />
+                              <TableColumn fx:id="mile" editable="false" prefWidth="75.0" sortable="false" text="Mileage" />
+                              <TableColumn fx:id="lsd" editable="false" prefWidth="117.0" sortable="false" text="Last Service Date" />
+                              <TableColumn fx:id="wid" editable="false" prefWidth="96.0" sortable="false" text="Warranty ID" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="booking" layoutX="830.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleButtonActionbooking" text="Vehicle Bookings" />
+                        <Button layoutX="510.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleButtonActiondelete" text="Delete Vehicle" />
+                        <Button layoutX="729.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleButtonActionparts" prefHeight="25.0" prefWidth="84.0" text="Vehicle Parts" />
+                        <ComboBox fx:id="mybox" layoutX="309.0" layoutY="429.0" onAction="#handleaction" prefHeight="25.0" prefWidth="189.0" promptText="Search Vehicle Registration" />
+                        <ComboBox fx:id="mybox2" layoutX="130.0" layoutY="429.0" onAction="#handleactioncust" prefHeight="25.0" prefWidth="162.0" promptText="Select Customer ID" />
+                        <Button layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleButtonreset" prefHeight="25.0" prefWidth="105.0" text="Reset Table" />
+                        <Button fx:id="add" alignment="CENTER" layoutX="950.0" layoutY="395.0" onAction="#handleButtonActionadd" text="Add Vehicle" textAlignment="CENTER" />
+                        <Label alignment="CENTER" layoutX="302.0" layoutY="-37.0" prefHeight="186.0" prefWidth="415.0" text="Vehicle Records" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="am" layoutX="948.0" layoutY="429.0" mnemonicParsing="false" onAction="#addmake" prefHeight="25.0" prefWidth="84.0" text="Add Make" />
+            <Button fx:id="addmo" layoutX="837.0" layoutY="429.0" mnemonicParsing="false" onAction="#addmodel" prefHeight="25.0" prefWidth="92.0" text="Add Model" />
+            <Button fx:id="update" layoutX="717.0" layoutY="429.0" mnemonicParsing="false" onAction="#updatewarranty" text="Update Warranty" />
+            <Button layoutX="615.0" layoutY="429.0" mnemonicParsing="false" onAction="#viewwarranty" text="View Warranty" />
+                     </children>
+                  </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="227.0" prefWidth="321.0" style="-fx-background-color: rgba(0,0,0,0.08),        linear-gradient(#9a9a9a, #909090),        linear-gradient(white 0%, #f3f3f3 50%, #ececec 51%, #f2f2f2 100%);;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ScheduledMaintenanceBookings.AuthFXMLController">
+   <children>
+      <Button fx:id="btnLogin" layoutX="18.0" layoutY="181.0" mnemonicParsing="false" onAction="#initLogin" prefHeight="31.0" prefWidth="290.0" style="-fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),        linear-gradient(#020b02, #3a3a3a),        linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),        linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),        linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbMechName" layoutX="18.0" layoutY="91.0" prefHeight="32.0" prefWidth="310.0" text="Mechanic:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="132.0" text="Password:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tfPassword" layoutX="108.0" layoutY="133.0" prefHeight="15.0" prefWidth="199.0" promptText="Password" />
+      <Label layoutX="22.0" layoutY="71.0" prefHeight="27.0" prefWidth="302.0" text="You need authentication from this mechanic to proceed" />
+      <ImageView fx:id="imgLogo" fitHeight="49.0" fitWidth="225.0" layoutX="51.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/login_logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgExit" fitHeight="15.0" fitWidth="15.0" layoutX="307.0" layoutY="7.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../resources/exit_icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

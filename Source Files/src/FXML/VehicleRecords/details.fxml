@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import Controllers.VehicleRecords.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="221.0" prefWidth="997.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.VehicleRecords.DetailsController">
+    
+        <children>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="262.0" prefWidth="997.0">
+                     <children>
+					 <Button fx:id="get" alignment="CENTER" layoutX="910.0" layoutY="217.0" onAction="#handleButtonActionget" text="Get Vehicle" textAlignment="CENTER" />
+                        <TableView fx:id="mytable" layoutX="-1.0" layoutY="91.0" prefHeight="116.0" prefWidth="997.0">
+                          <columns>
+                            <TableColumn fx:id="vid" editable="false" prefWidth="75.0" sortable="false" text="Registration" />
+                            <TableColumn fx:id="cid" editable="false" prefWidth="75.0" sortable="false" text="Customer ID" />
+                              <TableColumn fx:id="ctid" editable="false" prefWidth="75.0" sortable="false" text="Car Type" />
+                              <TableColumn fx:id="mdid" editable="false" prefWidth="75.0" sortable="false" text="Model" />
+                              <TableColumn fx:id="mid" editable="false" prefWidth="75.0" sortable="false" text="Make" />
+                              <TableColumn fx:id="esid" editable="false" prefWidth="75.0" sortable="false" text="Engine Size" />
+                              <TableColumn fx:id="coid" editable="false" prefWidth="75.0" sortable="false" text="Colour" />
+                              <TableColumn fx:id="ftid" editable="false" prefWidth="75.0" sortable="false" text="Fuel Type" />
+                              <TableColumn fx:id="mote" editable="false" prefWidth="109.0" sortable="false" text="MOT Expire Date" />
+                              <TableColumn fx:id="mile" editable="false" prefWidth="75.0" sortable="false" text="Mileage" />
+                              <TableColumn fx:id="lsd" editable="false" prefWidth="117.0" sortable="false" text="Last Service Date" />
+                              <TableColumn fx:id="wid" editable="false" prefWidth="96.0" sortable="false" text="Warranty ID" />
+                          </columns>
+                        </TableView>
+                        
+                         <Label alignment="CENTER" layoutX="302.0" layoutY="-37.0" prefHeight="186.0" prefWidth="415.0" text="Vehicle Records" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+                        
+                     </children>
+                  </AnchorPane>
+    </children>
+    
+</AnchorPane>

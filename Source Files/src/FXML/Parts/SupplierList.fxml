@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="787.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Parts.SupplierListController">
+   <children>
+      <Label layoutX="14.0" prefHeight="74.0" prefWidth="289.0" text="Supplier List" textFill="#463f3f">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="backFromSupplier" layoutX="16.0" layoutY="719.0" mnemonicParsing="false" onAction="#closeSupplier" prefHeight="39.0" prefWidth="224.0" text="Back" />
+      <TabPane fx:id="supplierHolder" layoutX="9.0" layoutY="61.0" prefHeight="356.0" prefWidth="1016.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="contrAgent" text="Supplier List">
+               <content>
+                  <TableView fx:id="supplierView" editable="true" prefHeight="233.0" prefWidth="1016.0">
+                    <columns>
+                      <TableColumn fx:id="supName" prefWidth="131.0" text="Name" />
+                      <TableColumn fx:id="supDesc" prefWidth="257.0" text="Description" />
+                        <TableColumn fx:id="supAddress" prefWidth="229.0" text="Address Line or Postcode" />
+                        <TableColumn fx:id="supPhone" prefWidth="131.0" text="Phone" />
+                        <TableColumn fx:id="supEmail" prefWidth="179.0" text="Email" />
+                        <TableColumn fx:id="supDelete" prefWidth="89.0" text="Select" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="pending" text="Pending Deliveries">
+               <content>
+                  <TableView fx:id="pendView" prefHeight="334.0" prefWidth="1016.0">
+                     <columns>
+                        <TableColumn fx:id="pendID" editable="false" prefWidth="90.0" text="ID" />
+                        <TableColumn fx:id="pendName" prefWidth="189.0" text="Name" />
+                        <TableColumn fx:id="pendSup" prefWidth="230.0" text="Supplier" />
+                        <TableColumn fx:id="pendAmount" prefWidth="122.0" text="Amount" />
+                        <TableColumn fx:id="pendPrice" prefWidth="124.0" text="Price for 1" />
+                        <TableColumn fx:id="pendDate" prefWidth="261.0" text="Estimated Arrival Date" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="14.0" layoutY="450.0" prefHeight="30.0" prefWidth="222.0" text="Add New Supplier" textFill="#463f3f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="newSupName" layoutX="128.0" layoutY="490.0" prefHeight="27.0" prefWidth="224.0" />
+      <Label layoutX="14.0" layoutY="495.0" prefHeight="28.0" prefWidth="101.0" text="Name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="543.0" prefHeight="28.0" prefWidth="101.0" text="Description">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newSupDesc" layoutX="128.0" layoutY="538.0" prefHeight="27.0" prefWidth="224.0" />
+      <TextField fx:id="newSupAdd" layoutX="128.0" layoutY="586.0" prefHeight="27.0" prefWidth="224.0" />
+      <Label layoutX="14.0" layoutY="591.0" prefHeight="28.0" prefWidth="101.0" text="Address">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newSupPhone" layoutX="433.0" layoutY="490.0" prefHeight="27.0" prefWidth="224.0" />
+      <Label layoutX="365.0" layoutY="496.0" prefHeight="28.0" prefWidth="65.0" text="Phone">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newSupE" layoutX="433.0" layoutY="538.0" prefHeight="27.0" prefWidth="224.0" />
+      <Label layoutX="374.0" layoutY="543.0" prefHeight="28.0" prefWidth="53.0" text="Email">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="addSup" layoutX="433.0" layoutY="587.0" mnemonicParsing="false" onAction="#toSupplier" prefHeight="39.0" prefWidth="224.0" text="Add Supplier" />
+      <Label layoutX="683.0" layoutY="493.0" prefHeight="28.0" prefWidth="74.0" text="Name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="663.0" layoutY="432.0" orientation="VERTICAL" prefHeight="324.0" prefWidth="13.0" />
+      <Label layoutX="683.0" layoutY="540.0" prefHeight="28.0" prefWidth="101.0" text="Supplier">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="683.0" layoutY="686.0" prefHeight="28.0" prefWidth="101.0" text="Arrival Date">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newPenName" layoutX="795.0" layoutY="487.0" prefHeight="27.0" prefWidth="224.0" />
+      <Button fx:id="addPen" layoutX="796.0" layoutY="726.0" mnemonicParsing="false" onAction="#toPending" prefHeight="39.0" prefWidth="224.0" text="Add to Pending" />
+      <Label layoutX="684.0" layoutY="450.0" prefHeight="30.0" prefWidth="222.0" text="Add to Pending" textFill="#463f3f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="selectDelete" layoutX="936.0" layoutY="60.0" mnemonicParsing="false" onAction="#deleteSelection" prefHeight="30.0" prefWidth="88.0" text="Delete" />
+      <DatePicker fx:id="newPenDate" layoutX="796.0" layoutY="681.0" prefHeight="39.0" prefWidth="224.0" />
+      <TextField fx:id="newPenAmount" layoutX="795.0" layoutY="584.0" prefHeight="27.0" prefWidth="224.0" />
+      <Label layoutX="683.0" layoutY="589.0" prefHeight="28.0" prefWidth="101.0" text="Amount">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="683.0" layoutY="640.0" prefHeight="28.0" prefWidth="101.0" text="Price for 1">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newPenPrice" layoutX="795.0" layoutY="635.0" prefHeight="27.0" prefWidth="224.0" />
+      <ComboBox fx:id="newPenSup" layoutX="796.0" layoutY="535.0" prefHeight="39.0" prefWidth="222.0" />
+      <Label layoutX="13.0" layoutY="635.0" prefHeight="27.0" prefWidth="645.0" text="Click on the table cell to edit supplier information. " textFill="#d00d0d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="668.0" prefHeight="27.0" prefWidth="575.0" text=" Hit ENTER to commit changes!" textFill="#d00d0d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

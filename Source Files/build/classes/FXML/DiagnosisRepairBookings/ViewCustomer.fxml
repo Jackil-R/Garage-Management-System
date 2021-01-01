@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="356.0" prefWidth="313.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DiagnosisRepairBookings.ViewCustomerController">
+   <children>
+      <Pane layoutX="5.0" layoutY="7.0" prefHeight="313.0" prefWidth="303.0">
+         <children>
+            <Label layoutX="52.0" layoutY="103.0" text="First Name:" />
+            <Label layoutX="64.0" layoutY="133.0" text="Surname:" />
+            <Label layoutX="30.0" layoutY="163.0" text="Address Line 1:" />
+            <Label layoutX="30.0" layoutY="193.0" text="Address Line 2:" />
+            <Label layoutX="76.0" layoutY="223.0" text="County:" />
+            <Label layoutX="61.0" layoutY="252.0" text="Postcode:" />
+            <Label layoutX="87.0" layoutY="44.0" text="Type:" />
+            <Label layoutX="20.0" layoutY="72.0" text="Company Name:" />
+            <Label layoutX="30.0" layoutY="283.0" text="Phone Number:" />
+            <TextField fx:id="TcustomerType" editable="false" layoutX="123.0" layoutY="39.0" />
+            <TextField fx:id="TcustomerCompanyName" editable="false" layoutX="123.0" layoutY="68.0" />
+            <TextField fx:id="TcustomerFName" editable="false" layoutX="123.0" layoutY="98.0" />
+            <TextField fx:id="TcustomerSName" editable="false" layoutX="123.0" layoutY="128.0" />
+            <TextField fx:id="TcustomerAddLine1" editable="false" layoutX="123.0" layoutY="158.0" />
+            <TextField fx:id="TcustomerAddLine2" editable="false" layoutX="123.0" layoutY="187.0" />
+            <TextField fx:id="TcustomerCounty" editable="false" layoutX="124.0" layoutY="217.0" />
+            <TextField fx:id="TcustomerPostCode" editable="false" layoutX="123.0" layoutY="247.0" />
+            <TextField fx:id="TcustomerPhoneNo" editable="false" layoutX="123.0" layoutY="278.0" />
+            <Label layoutX="76.0" layoutY="14.0" text="CUSTOMER DETAILS" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="closeBtn" layoutX="123.0" layoutY="320.0" mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+   </children>
+</AnchorPane>

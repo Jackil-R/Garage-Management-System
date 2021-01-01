@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Customer.OutstandingBillsController">
+   <children>
+      <Separator layoutY="33.0" prefHeight="4.0" prefWidth="400.0" />
+      <Label layoutX="25.0" layoutY="44.0" text="OUTSTANDING BILLS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="finishedBtn" layoutX="27.0" layoutY="409.0" mnemonicParsing="false" onAction="#finishedBtnPressed" prefHeight="27.0" prefWidth="347.0" text="Finished" />
+      <TableView fx:id="outstandingBillsTable" layoutX="25.0" layoutY="114.0" prefHeight="250.0" prefWidth="347.0">
+        <columns>
+          <TableColumn fx:id="billIDColumn" maxWidth="56.0" minWidth="56.0" prefWidth="56.0" resizable="false" text="Bill ID" />
+          <TableColumn fx:id="dateOfBillColumn" maxWidth="116.0" minWidth="116.0" prefWidth="116.0" resizable="false" text="Date of Bill" />
+            <TableColumn fx:id="timeOfBillColumn" maxWidth="86.0" minWidth="86.0" prefWidth="86.0" resizable="false" text="Time of Bill" />
+            <TableColumn fx:id="billAmountColumn" maxWidth="88.0" minWidth="88.0" prefWidth="88.0" resizable="false" text="Bill Amount" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="71.0" text="Select a bill which needs to be settled in the table below." />
+      <Label layoutX="27.0" layoutY="87.0" text="Press the settled button to settle it." />
+      <Button fx:id="settledBtn" layoutX="27.0" layoutY="375.0" mnemonicParsing="false" onAction="#billSettledPressed" prefHeight="27.0" prefWidth="347.0" text="Settled" />
+   </children>
+</AnchorPane>

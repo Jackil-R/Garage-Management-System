@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="193.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Customer.SearchModuleController">
+   <children>
+      <Label prefHeight="17.0" prefWidth="210.0" text="Search using business name" />
+      <TextField fx:id="searchBusinessTxtField" layoutY="19.0" promptText="search for business" />
+      <Button fx:id="searchBusinessBtn" layoutX="157.0" layoutY="19.0" mnemonicParsing="false" onAction="#searchForBusiness" text="Search" />
+      <Label layoutY="54.0" prefHeight="17.0" prefWidth="210.0" text="Search using customers surname" />
+      <TextField fx:id="searchCustomerTxtField" layoutY="73.0" promptText="search for customer" />
+      <Button fx:id="searchCustomerBtn" layoutX="157.0" layoutY="73.0" mnemonicParsing="false" onAction="#searchForCustomer" text="Search" />
+      <Label layoutY="108.0" prefHeight="17.0" prefWidth="210.0" text="Search using postcode" />
+      <TextField fx:id="searchPostcodeTxtField" layoutY="127.0" promptText="search for postcode" />
+      <Button fx:id="searchPostcodeBtn" layoutX="157.0" layoutY="127.0" mnemonicParsing="false" onAction="#searchForPostcode" text="Search" />
+      <Button fx:id="resetBtn" layoutY="167.0" mnemonicParsing="false" onAction="#resetSearch" prefHeight="25.0" prefWidth="209.0" text="Reset Search" />
+   </children>
+</AnchorPane>

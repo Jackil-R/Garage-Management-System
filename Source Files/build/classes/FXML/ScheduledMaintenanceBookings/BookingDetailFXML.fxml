@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="776.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ScheduledMaintenanceBookings.BookingDetailFXMLController">
+   <children>
+      <Label layoutY="-3.0" text="Booking Information">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="252.0" text="Bay Number:" />
+      <Label layoutX="37.0" layoutY="186.0" text="Time End:" />
+      <Label layoutX="63.0" layoutY="106.0" text="Date:" />
+      <Label layoutX="39.0" layoutY="216.0" text="Mechanic:" />
+      <Label layoutX="24.0" layoutY="75.0" text="Booking Fee:" />
+      <Label layoutX="14.0" layoutY="43.0" text="Booking Type:" />
+      <Label layoutX="35.0" layoutY="145.0" text="Time Start:" />
+      <Label layoutX="45.0" layoutY="606.0" text="Warranty:" />
+      <TextField fx:id="editVehicleWarranty" editable="false" layoutX="98.0" layoutY="602.0" />
+      <Label layoutX="35.0" layoutY="454.0" text="Engine Size:" />
+      <Label layoutX="66.0" layoutY="327.0" text="Make:" />
+      <Label layoutX="63.0" layoutY="358.0" text="Model:" />
+      <TextField fx:id="editVehicleMileage" editable="false" layoutX="100.0" layoutY="416.0" />
+      <Label layoutX="53.0" layoutY="420.0" text="Mileage:" />
+      <Label layoutX="75.0" layoutY="392.0" text="Reg:" />
+      <TextField fx:id="editVehicleReg" editable="false" layoutX="100.0" layoutY="385.0" />
+      <Label layoutX="57.0" layoutY="485.0" text="Colour:" />
+      <TextField fx:id="editVehicleService" editable="false" layoutX="99.0" layoutY="573.0" />
+      <Label layoutX="7.0" layoutY="577.0" text="Last Service Date:" />
+      <Label layoutX="45.0" layoutY="516.0" text="Fuel Type:" />
+      <Label layoutX="7.0" layoutY="546.0" text="MOT Expiry Date:" />
+      <TextField fx:id="editVehicleMOT" editable="false" layoutX="98.0" layoutY="542.0" />
+      <Label layoutX="22.0" layoutY="281.0" prefHeight="25.0" prefWidth="151.0" text="Vehicle Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="editCustomerPostal" editable="false" layoutX="411.0" layoutY="516.0" />
+      <Label layoutX="360.0" layoutY="520.0" text="Postcode:" />
+      <Label layoutX="371.0" layoutY="489.0" text="County:" />
+      <TextField fx:id="editCustomerCounty" editable="false" layoutX="411.0" layoutY="485.0" />
+      <Label layoutX="359.0" layoutY="551.0" text="Company:" />
+      <TextField fx:id="editCustomerCompany" editable="false" layoutX="411.0" layoutY="547.0" />
+      <TextField fx:id="editCustomerAddress2" editable="false" layoutX="411.0" layoutY="454.0" />
+      <Label layoutX="331.0" layoutY="458.0" text="Address Line 2:" />
+      <TextField fx:id="editCustomerNumber" editable="false" layoutX="411.0" layoutY="392.0" />
+      <Label layoutX="326.0" layoutY="396.0" text="Phone Number:" />
+      <Label layoutX="331.0" layoutY="427.0" text="Address Line 1:" />
+      <TextField fx:id="editCustomerAddress1" editable="false" layoutX="411.0" layoutY="423.0" />
+      <TextField fx:id="editCustomerSurname" editable="false" layoutX="411.0" layoutY="361.0" />
+      <Label layoutX="361.0" layoutY="365.0" text="Surname:" />
+      <Label layoutX="351.0" layoutY="334.0" text="First Name:" />
+      <TextField fx:id="editCustomerName" editable="false" layoutX="411.0" layoutY="330.0" />
+      <Label layoutX="326.0" layoutY="285.0" prefHeight="25.0" prefWidth="151.0" text="Customer Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="editBookingParts" editable="false" layoutX="278.0" layoutY="167.0" prefHeight="57.0" prefWidth="361.0" />
+      <Label layoutX="282.0" layoutY="146.0" text="Parts List:" />
+      <Label layoutX="275.0" layoutY="18.0" text="Service Report Notes:" />
+      <TextArea fx:id="editBookingNotes" editable="false" layoutX="278.0" layoutY="37.0" prefHeight="92.0" prefWidth="361.0" />
+      <Button fx:id="btnSaveBooking" layoutX="58.0" layoutY="650.0" mnemonicParsing="false" onAction="#saveBooking" prefHeight="40.0" prefWidth="229.0" text="Save Changes" />
+      <Button fx:id="btnCloseBooking" cancelButton="true" layoutX="352.0" layoutY="650.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="223.0" text="Close Booking" />
+      <Button fx:id="btnDeleteBooking" contentDisplay="RIGHT" layoutX="382.0" layoutY="714.0" mnemonicParsing="false" onAction="#confirmDelete" prefHeight="25.0" prefWidth="149.0" text="Delete Booking" />
+      <TextField fx:id="editVehicleMake" editable="false" layoutX="101.0" layoutY="323.0" />
+      <TextField fx:id="editVehicleModel" editable="false" layoutX="101.0" layoutY="354.0" />
+      <TextField fx:id="editVehicleEngine" editable="false" layoutX="101.0" layoutY="447.0" />
+      <TextField fx:id="editVehicleColour" editable="false" layoutX="101.0" layoutY="481.0" />
+      <TextField fx:id="editVehicleFuel" editable="false" layoutX="100.0" layoutY="512.0" />
+      <ComboBox fx:id="editBookingMechanic" layoutX="101.0" layoutY="212.0" prefHeight="25.0" prefWidth="151.0" />
+      <LocalTimePicker fx:id="editBookingTimeEnd" layoutX="101.0" layoutY="178.0" prefHeight="32.0" prefWidth="149.0" />
+      <LocalTimePicker fx:id="editBookingTimeStart" layoutX="102.0" layoutY="137.0" prefHeight="32.0" prefWidth="149.0" />
+      <ComboBox fx:id="editBookingBayNumber" layoutX="102.0" layoutY="248.0" prefWidth="150.0" />
+      <ComboBox fx:id="editBookingType" layoutX="99.0" layoutY="37.0" prefWidth="150.0" />
+      <DatePicker fx:id="editBookingDate" layoutX="99.0" layoutY="100.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="editBookingFee" editable="false" layoutX="99.0" layoutY="68.0" />
+   </children>
+</AnchorPane>

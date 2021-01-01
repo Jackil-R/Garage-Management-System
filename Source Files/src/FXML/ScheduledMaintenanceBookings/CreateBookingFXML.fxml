@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="569.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ScheduledMaintenanceBookings.CreateBookingFXMLController">
+   <children>
+      <Label layoutY="-3.0" text="Maintanence Booking">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="254.0" text="Bay Number:" />
+      <Label layoutX="43.0" layoutY="184.0" text="Time End:" />
+      <Label layoutX="63.0" layoutY="106.0" text="Date:" />
+      <Label layoutX="37.0" layoutY="220.0" text="Mechanic:" />
+      <TextField fx:id="createBookingFee" editable="false" layoutX="91.0" layoutY="70.0" />
+      <Label layoutX="24.0" layoutY="75.0" text="Booking Fee:" />
+      <Label layoutX="14.0" layoutY="43.0" text="Booking Type:" />
+      <Label layoutX="36.0" layoutY="143.0" text="Time Start:" />
+      <Label layoutX="52.0" layoutY="442.0" text="Warranty:" />
+      <TextField fx:id="createVehicleWarranty" editable="false" layoutX="105.0" layoutY="438.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="314.0" layoutY="319.0" text="Engine Size:" />
+      <Label layoutX="67.0" layoutY="317.0" text="Make:" />
+      <Label layoutX="64.0" layoutY="348.0" text="Model:" />
+      <TextField fx:id="createVehicleMileage" editable="false" layoutX="102.0" layoutY="405.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="54.0" layoutY="410.0" text="Mileage:" />
+      <Label layoutX="76.0" layoutY="382.0" text="Reg:" />
+      <TextField fx:id="createVehicleReg" editable="false" layoutX="102.0" layoutY="374.0" />
+      <Label layoutX="336.0" layoutY="350.0" text="Colour:" />
+      <TextField fx:id="createVehicleService" editable="false" layoutX="380.0" layoutY="438.0" />
+      <Label layoutX="284.0" layoutY="442.0" text="Last Service Date:" />
+      <Label layoutX="324.0" layoutY="381.0" text="Fuel Type:" />
+      <Label layoutX="286.0" layoutY="411.0" text="MOT Expiry Date:" />
+      <TextField fx:id="createVehicleMOT" editable="false" layoutX="380.0" layoutY="407.0" />
+      <Label layoutX="24.0" layoutY="285.0" prefHeight="25.0" prefWidth="151.0" text="Vehicle Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="createCustomerPostal" editable="false" layoutX="370.0" layoutY="234.0" />
+      <Label layoutX="319.0" layoutY="238.0" text="Postcode:" />
+      <Label layoutX="330.0" layoutY="207.0" text="County:" />
+      <TextField fx:id="createCustomerCounty" editable="false" layoutX="370.0" layoutY="203.0" />
+      <Label layoutX="318.0" layoutY="269.0" text="Company:" />
+      <TextField fx:id="createCustomerCompany" editable="false" layoutX="370.0" layoutY="265.0" />
+      <TextField fx:id="createCustomerAddress2" editable="false" layoutX="370.0" layoutY="172.0" />
+      <Label layoutX="290.0" layoutY="176.0" text="Address Line 2:" />
+      <TextField fx:id="createCustomerNumber" editable="false" layoutX="370.0" layoutY="110.0" />
+      <Label layoutX="285.0" layoutY="114.0" text="Phone Number:" />
+      <Label layoutX="290.0" layoutY="145.0" text="Address Line 1:" />
+      <TextField fx:id="createCustomerAddress1" editable="false" layoutX="370.0" layoutY="141.0" />
+      <TextField fx:id="createCustomerSurname" editable="false" layoutX="370.0" layoutY="79.0" />
+      <Label layoutX="320.0" layoutY="83.0" text="Surname:" />
+      <Label layoutX="310.0" layoutY="52.0" text="First Name:" />
+      <TextField fx:id="createCustomerName" editable="false" layoutX="370.0" layoutY="48.0" />
+      <Label layoutX="368.0" layoutY="16.0" prefHeight="25.0" prefWidth="151.0" text="Customer Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCreateBooking" layoutX="42.0" layoutY="510.0" mnemonicParsing="false" onAction="#insertBooking" prefHeight="40.0" prefWidth="229.0" text="Create New Booking" />
+      <Button fx:id="btnCloseBooking" cancelButton="true" layoutX="324.0" layoutY="510.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="223.0" text="Cancel" />
+      <DatePicker fx:id="createBookingDate" layoutX="91.0" layoutY="102.0" prefHeight="25.0" prefWidth="149.0" />
+      <ComboBox fx:id="createBookingType" layoutX="91.0" layoutY="39.0" prefWidth="150.0" />
+      <Button fx:id="btnFindCustomer" layoutX="166.0" layoutY="475.0" mnemonicParsing="false" onAction="#findCustomer" prefHeight="25.0" prefWidth="271.0" text="Find Vehicle and Customer Details" />
+      <TextField fx:id="createVehicleEngine" editable="false" layoutX="379.0" layoutY="316.0" />
+      <TextField fx:id="createVehicleColour" editable="false" layoutX="380.0" layoutY="347.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="createVehicleFuel" editable="false" layoutX="379.0" layoutY="376.0" />
+      <TextField fx:id="createVehicleMake" editable="false" layoutX="103.0" layoutY="312.0" />
+      <TextField fx:id="createVehicleModel" editable="false" layoutX="103.0" layoutY="343.0" />
+      <ComboBox fx:id="createBookingBayNumber" layoutX="94.0" layoutY="250.0" prefWidth="150.0" />
+      <LocalTimePicker fx:id="createBookingTimeStart" layoutX="95.0" layoutY="136.0" prefHeight="32.0" prefWidth="149.0" />
+      <LocalTimePicker fx:id="createBookingTimeEnd" layoutX="94.0" layoutY="177.0" prefHeight="32.0" prefWidth="149.0" />
+      <ComboBox fx:id="createBookingMechanic" layoutX="94.0" layoutY="216.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

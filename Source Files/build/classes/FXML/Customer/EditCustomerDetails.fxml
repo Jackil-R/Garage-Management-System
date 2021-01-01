@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Customer.EditCustomerDetailsController">
+   <children>
+      <Separator layoutY="33.0" prefHeight="4.0" prefWidth="800.0" />
+      <Button fx:id="cancelChangesBtn" layoutX="112.0" layoutY="352.0" mnemonicParsing="false" onAction="#cancelEdit" prefHeight="25.0" prefWidth="149.0" text="Cancel changes" />
+      <Label layoutX="25.0" layoutY="39.0" text="CURRENT">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="62.0" text="modify the customers details below:" />
+      <Label layoutX="25.0" layoutY="92.0" text="Business Name:" />
+      <TextField fx:id="businessNameTxt" layoutX="112.0" layoutY="88.0" text="pre-filled" />
+      <Label layoutX="26.0" layoutY="123.0" text="Forename:" />
+      <TextField fx:id="forenameTxt" layoutX="112.0" layoutY="120.0" text="pre-filled" />
+      <Label layoutX="26.0" layoutY="156.0" text="Surname:" />
+      <TextField fx:id="surnameTxt" layoutX="112.0" layoutY="152.0" text="pre-filled" />
+      <Label layoutX="26.0" layoutY="189.0" text="Address Line 1:" />
+      <TextField fx:id="addressLine1Txt" layoutX="112.0" layoutY="185.0" text="pre-filled" />
+      <Label layoutX="26.0" layoutY="222.0" text="Address Line 2:" />
+      <TextField fx:id="addressLine2Txt" layoutX="112.0" layoutY="218.0" text="pre-filled" />
+      <Label layoutX="26.0" layoutY="256.0" text="County:" />
+      <TextField fx:id="countyTxt" layoutX="112.0" layoutY="252.0" text="pre-filled" />
+      <Label layoutX="26.0" layoutY="289.0" text="Postcode:" />
+      <TextField fx:id="postcodeTxt" layoutX="112.0" layoutY="285.0" text="pre-filled" />
+      <Label layoutX="26.0" layoutY="322.0" text="Phone number:" />
+      <TextField fx:id="phoneNumberTxt" layoutX="112.0" layoutY="318.0" text="pre-filled" />
+      <Button fx:id="submitChangesBtn" layoutX="112.0" layoutY="383.0" mnemonicParsing="false" onAction="#changesSubmitted" prefHeight="25.0" prefWidth="149.0" text="Submit changes" />
+      <Label fx:id="businessErrorLbl" layoutX="269.0" layoutY="92.0" textFill="RED" />
+      <Label fx:id="forenameErrorLbl" layoutX="269.0" layoutY="124.0" textFill="RED" />
+      <Label fx:id="surnameErrorLbl" layoutX="269.0" layoutY="156.0" textFill="RED" />
+      <Label fx:id="addressLine1ErrorLbl" layoutX="269.0" layoutY="189.0" textFill="RED" />
+      <Label fx:id="countyErrorLbl" layoutX="269.0" layoutY="256.0" textFill="RED" />
+      <Label fx:id="postcodeErrorLbl" layoutX="269.0" layoutY="289.0" textFill="RED" />
+      <Label fx:id="phoneNumberErrorLbl" layoutX="269.0" layoutY="322.0" textFill="RED" />
+   </children>
+</AnchorPane>

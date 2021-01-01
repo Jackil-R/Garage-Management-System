@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="1307.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Parts.PartsController">
+   <children>
+      <Label layoutX="28.0" layoutY="-8.0" prefHeight="92.0" prefWidth="229.0" text="Parts Stock" textFill="#463f3f">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <Button fx:id="newPart" layoutX="15.0" layoutY="468.0" mnemonicParsing="false" onAction="#addPart" prefHeight="58.0" prefWidth="327.0" text="Add New Part" />
+      <Button fx:id="supplierList" layoutX="15.0" layoutY="648.0" mnemonicParsing="false" onAction="#getSupplierList" prefHeight="58.0" prefWidth="327.0" text="Supplier and Outstanding Deliveries" />
+      <TabPane fx:id="tableHolder" layoutX="352.0" layoutY="1.0" prefHeight="756.0" prefWidth="935.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="bodyMainTab" text="Body and Main">
+               <content>
+                  <TableView fx:id="bodyMainView" editable="true" prefHeight="668.0" prefWidth="935.0">
+                    <columns>
+                        <TableColumn fx:id="idBody" editable="false" prefWidth="131.0" text="ID" />
+                      <TableColumn fx:id="partName" editable="false" prefWidth="169.0" text="Name" />
+                      <TableColumn fx:id="partDesc" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStock" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPrice" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrder" editable="true" prefWidth="155.0" text="Select to Remove" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="powerTrainTab" text="Powertrain">
+               <content>
+                  <TableView fx:id="powerTrainView" editable="true" prefHeight="512.0" prefWidth="844.0">
+                     <columns>
+                        <TableColumn fx:id="idPower" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNamePower" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescPower" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockPower" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPricePower" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderPower" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="chassisTab" text="Chassis">
+               <content>
+                  <TableView fx:id="chassisView" editable="true" prefHeight="605.0" prefWidth="865.0">
+                     <columns>
+                        <TableColumn fx:id="idChassis" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNameChassis" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescChassis" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockChassis" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPriceChassis" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderChassis" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="lightsTab" text="Lights">
+               <content>
+                  <TableView fx:id="lightsView" editable="true" prefHeight="605.0" prefWidth="865.0">
+                     <columns>
+                        <TableColumn fx:id="idLights" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNameLights" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescLights" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockLights" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPriceLights" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderLights" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="electricsTab" text="Electrics">
+               <content>
+                  <TableView fx:id="electricsView" editable="true" prefHeight="605.0" prefWidth="865.0">
+                     <columns>
+                        <TableColumn fx:id="idElectrics" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNameElectrics" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescElectrics" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockElectrics" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPriceElectrics" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderElectrics" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="audioTab" text="Audio &amp; Video">
+               <content>
+                  <TableView fx:id="audioView" editable="true" prefHeight="605.0" prefWidth="865.0">
+                     <columns>
+                        <TableColumn fx:id="idAudio" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNameAudio" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescAudio" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockAudio" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPriceAudio" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderAudio" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="interiorTab" text="Interior">
+               <content>
+                  <TableView fx:id="interiorView" editable="true" prefHeight="605.0" prefWidth="865.0">
+                     <columns>
+                        <TableColumn fx:id="idInterior" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNameInterior" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescInterior" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockInterior" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPriceInterior" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderInterior" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="miscTab" text="MISC">
+               <content>
+                  <TableView fx:id="miscView" editable="true" prefHeight="605.0" prefWidth="865.0">
+                     <columns>
+                        <TableColumn fx:id="idMisc" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNameMisc" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescMisc" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockMisc" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPriceMisc" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderMisc" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="outfitTab" text="Outfit">
+               <content>
+                  <TableView fx:id="outfitView" editable="true" prefHeight="605.0" prefWidth="865.0">
+                     <columns>
+                        <TableColumn fx:id="idOutfit" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNameOutfit" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescOutfit" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockOutfit" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPriceOutfit" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderOutfit" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab fx:id="airTab" text="Air &amp; Heat">
+               <content>
+                  <TableView fx:id="airView" editable="true" prefHeight="605.0" prefWidth="942.0">
+                     <columns>
+                        <TableColumn fx:id="idAir" prefWidth="131.0" text="ID" />
+                        <TableColumn fx:id="partNameAir" editable="false" prefWidth="169.0" text="Name" />
+                        <TableColumn fx:id="partDescAir" editable="false" prefWidth="193.0" text="Description" />
+                        <TableColumn fx:id="partLeftInStockAir" editable="false" prefWidth="137.0" text="Left in Stock" />
+                        <TableColumn fx:id="partPriceAir" editable="false" prefWidth="150.0" text="Price" />
+                        <TableColumn fx:id="partOrderAir" prefWidth="155.0" text="Select to Remove" />
+                     </columns>
+                  </TableView>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TextField fx:id="nameInput" layoutX="155.0" layoutY="212.0" prefHeight="39.0" prefWidth="191.0" />
+      <Label layoutX="14.0" layoutY="218.0" prefHeight="27.0" prefWidth="157.0" text="Enter Part Name:" />
+      <Label layoutX="14.0" layoutY="267.0" prefHeight="27.0" prefWidth="157.0" text="Enter Description:" />
+      <TextField fx:id="descInput" layoutX="155.0" layoutY="261.0" prefHeight="39.0" prefWidth="191.0" />
+      <Label layoutX="14.0" layoutY="358.0" prefHeight="27.0" prefWidth="157.0" text="Enter Quantaty:" />
+      <TextField fx:id="amountInput" layoutX="257.0" layoutY="352.0" prefHeight="39.0" prefWidth="86.0" />
+      <Label layoutX="14.0" layoutY="407.0" prefHeight="27.0" prefWidth="157.0" text="Enter Price:" />
+      <TextField fx:id="priceInput" layoutX="257.0" layoutY="401.0" prefHeight="39.0" prefWidth="86.0" />
+      <Label layoutX="14.0" layoutY="312.0" prefHeight="27.0" prefWidth="157.0" text="Choose type:" />
+      <ComboBox fx:id="typeChooser" layoutX="155.0" layoutY="306.0" prefHeight="39.0" prefWidth="191.0" promptText="Body and Main">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Body and Main" />
+                            <String fx:value="Powertrain" />
+                            <String fx:value="Chassis" />
+                            <String fx:value="Lights" />
+                            <String fx:value="Electrics" />
+                            <String fx:value="Audio and Video" />
+                            <String fx:value="Interior" />
+                            <String fx:value="Misc" />
+                            <String fx:value="Outfit" />
+                            <String fx:value="Air and Heating" />
+                        </FXCollections>
+               </items>
+   </ComboBox>
+      <Label layoutX="14.0" layoutY="159.0" text="Add a Part to the Stock" textFill="#463f3f">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="takeOut" layoutX="15.0" layoutY="558.0" mnemonicParsing="false" onAction="#getBasket" prefHeight="58.0" prefWidth="327.0" text="Take Out From Part Stock" />
+   </children>
+</AnchorPane>
